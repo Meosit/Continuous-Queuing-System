@@ -1,0 +1,18 @@
+digraph finite_state_machine {
+	rankdir=LR;
+	node [shape = circle];
+	edge[fontsize=16];
+	graph [ dpi = 300 ];
+
+	"00" -> "10" [label = "λ"];
+
+	"10" -> "00" [label = "μ₁"];
+	"10" -> "11" [label = "λ"];
+
+	"01" -> "00" [label = "μ₂"];
+	"01" -> "11" [label = "λ"];
+
+	"11" -> "10" [label = "μ₂"];
+	"11" -> "01" [label = "μ₁"];
+
+}
